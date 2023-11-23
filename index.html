@@ -1,51 +1,69 @@
-<!DOCTYPE
+<!DOCTYPE html>
 <html>
- <head>
-
-<link href="style.css" rel="stylesheet" type="text/css">
-
-<Style>
-body {margin:0;}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #A42B83;
-    position: fixed;
-    top: 0;
-    width: 100%;
+<head>
+    <title>Go Green Club</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" href="images/earthFavicon-3.png"/>
+    <style>
+        body {
+    background-image: url('images/background3.jpg');
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
+    /*heading colour*/
+    h1{
+        color: #4CAF50;
+        text-align: center; 
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        /*shadow*/
+        text-shadow: 2px 2px 4px black;
+    } h2, h3 {
+        color: #006600;
+        text-align: center;
+    }
 
-li {
-    float: left;
-}
+    p {
+        text-align: left;
+    }
+            
+    </style>
+</head>
+<body>
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+<!--alert about party-->
+<div class="w3-panel w3-purple w3-display-container">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
+    <h2 style="color:white; text-align: center;">REMINDER!</h2>
+    <p style="text-align:center">Don't forget to come to the Go Green party at xyz C:</p>
+  </div>
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
+<!--navigation bar-->
+<div class="w3-bar w3-border w3-card-4 w3-green">
+    <a href="index.html" class="w3-bar-item w3-button w3-border-right">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-border-right">Our Projects</a>
+    <a href="Contact-page.html" class="w3-bar-item w3-button w3-border-right">Contact Us</a>
+    <a href="#" class="w3-bar-item w3-button w3-border-right">Suggestions</a>
+</div>
 
-.active {
-    background-color: #A42B83;
-}
-</Style>
- </head>
- <body>
+<!--a description-->
+<div class="w3-container w3-content" style="max-width: 800px; margin-top: 20px;">
+    <h1>All Saints Go Green</h1>
+    <p>description</p>
 
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="Information-page.html">Information</a></li>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html">Home</a></li>
-</ul>
- </body>   
+    <!-- news/reminders-->
+    <div class="w3-card w3-margin w3-padding-small w3-green" style="float: right; width: 30%;">
+        <h3>Upcoming Events</h3>
+        <p style="color:white;">Event 1 - Date/Time</p>
+        <p style="color:white;">Event 2 - Date/Time</p>
+    </div>
+    
+</div>
+
+</body>
 </html>
