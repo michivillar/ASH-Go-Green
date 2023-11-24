@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Go Green Club</title>
+    <title>Ash Go Green</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" type="image/png" href="images/earthFavicon-3.png"/>
-    <style>
+    
+    <style>    
         body {
     background-image: url('images/background3.jpg');
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+}
+img {
+  border: 7px solid #3E8184;
 }
     /*heading colour*/
     h1{
@@ -18,10 +22,10 @@
         font-size: 2.5em;
         margin-bottom: 20px;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-weight: bold;
         /*shadow*/
-        text-shadow: 2px 2px 4px black;
+        text-shadow: 2px 2px 2px black;
     } h2, h3 {
         color: #006600;
         text-align: center;
@@ -29,43 +33,78 @@
 
     p {
         text-align: left;
+        font-family: 'Verdana';
+        text-shadow:0px 0px 15px #444;
+
     }
             
     </style>
 </head>
 <body>
-
-<!--alert about party-->
-<div class="w3-modal-content w3-animate-zoom w3-card-4">
-    <header class="w3-container w3-purple w3-padding-16"> 
+ <!--reminder popup-->
+<div class="w3-modal-content w3-display-middle" style="z-index: 9999;">
+    <header class="w3-container w3-teal w3-padding-16"> 
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <h2 style="color:white; text-align: center;">REMINDER!</h2>
     <p style="text-align:center">Don't forget to come to the Go Green party on Wednesday, December 20 at lunch, R210 :)</p>
-  </div>
+  </div> 
+
 
 <!--navigation bar-->
-<div class="w3-bar w3-border w3-card-4 w3-green">
+<div class="w3-bar w3-card-4 w3-green">
     <a href="index.html" class="w3-bar-item w3-button w3-border-right" class=active>Home</a>
     <a href="#" class="w3-bar-item w3-button w3-border-right">Our Projects</a>
-    <a href="Contact-page.html" class="w3-bar-item w3-button w3-border-right">Contact Us</a>
+    <a href="News.html" class="w3-bar-item w3-button w3-border-right">Garden</a>
     <a href="Suggestions.html" class="w3-bar-item w3-button w3-border-right">Suggestions</a>
-    <a href="News.html" class="w3-bar-item w3-button w3-border-right">News</a>
-
+    <a href="Contact-page.html" class="w3-bar-item w3-button w3-border-right">Contact Us</a>
 </div>
 
 <!--a description-->
-<div class="w3-container w3-content" style="max-width: 800px; margin-top: 20px;">
-    <h1>All Saints Go Green</h1>
-    <p>description</p>
+<div class="w3-container w3-content" style="max-width: 800px; margin-top: 20px; margin-right: 30%;">
+
+    <h1 style="text-shadow:1px 1px 2px #444">All Saints Go Green</h1>
+
+    <p>Go Green is one of the clubs offered to Grade 9-12 students at ASH. If you care about the environment, 
+        love taking care of plants, or want to learn more about the world around us, this is the place for you! 
+        The club's main purpose is to raise awareness of environmental issues and engage members in activities that contribute to a more sustainable and eco-friendly way of life.</p>
+
+     <!--slideshow-->
+    <div class="w3-content w3-section">
+        <img class="mySlides" src="images/recycle (1).jpg" style="width:700px;height:285px; margin-left: 2%;">
+        <img class="mySlides" src="images/gardening (1).jpg" style="width:700px;height:285px; margin-left: 2%;">
+        <img class="mySlides" src="images/cookies (1).jpg" style="width:700px;height:285px; margin-left: 2%;">
+    </div>
+  
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 3000); 
+    }
+    </script>
+    
 
     <!-- news/reminders-->
-    <div class="w3-card w3-margin w3-padding-small w3-green" style="float: right; width: 30%;">
-        <h3>Upcoming Events</h3>
-        <b style="color:white;">Christmas Party - December 20 - Lunch R210.</b>
-        <p>Don't forget to bring food to share!</p>
+    <div class="w3-sidebar w3-padding-small w3-green" style="width: 20%; position: fixed; top: 0; right: 0; box-shadow: none; text-shadow:0px 0px 15px #444;">
+        <h3 class="w3-opacity" style="text-shadow:none"><b>Upcoming events:</b></h3>
+        <p></p>
+        <b style="color:white;">Meeting @ lunch - Wed, December 6 in R210</b>
         <hr>
-        <p style="color:white;">Meeting - Lunch</p>
+        <b style="color:white;">Christmas Party - Wed, December 20 - Lunch in R210</b>
+        <p></p>
+        <small>Bring food to share!</small>
+        <hr>
+        
     </div>
     
 </div>

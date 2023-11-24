@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Green Club</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" href="images/earthFavicon-3.png"/>
+    
+    <style>
+         .modal {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           background-color: rgba(0,0,0,0.7);
+           /* additional styles for the modal */
+        }
+        .modal {
+           width: 400px;
+           height: 300px;
+           background-color: #a024b4;
+           border: 1px solid #cccccc;
+           padding: 20px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+           border-radius: 10px;
+           z-index:1000;
+        }
+    </style>
+</head>
+<body>
+        <div id="modal" class="modal">
+        <div class="modal-content"></div>
+            <header class="w3-container w3-purple w3-padding-16"> 
+            <span onclick="document.getElementById('modal').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+             <h2 style="color:white; text-align: center;">REMINDER!</h2>
+             <p style="text-align:center">Don't forget to come to the Go Green party on Wednesday, December 20 at lunch, R210 :)</p>
+          </header>
+            </div>
+        </div>
+
+     <script>
+        window.onresize = function() {
+           var modal = document.getElementById("modal");
+           var top = (window.innerHeight - modal.offsetHeight) / 2;
+           var left = (window.innerWidth - modal.offsetWidth) / 2;
+           modal. style.top = top + "px";
+           modal. style. left = left + "px";
+        }
+     </script>
+     </div>
+
+    </body>
+    </html>
