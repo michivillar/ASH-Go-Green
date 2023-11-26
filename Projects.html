@@ -3,12 +3,12 @@
 <head>
     <title>Our Projects</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" type="image/png" href="images/earthFavicon-3.png"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <style>
         body {
     background-color: #4CAF50;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Verdana', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -16,7 +16,7 @@
     h1{
         color: white;
         text-align: center; 
-        font-size: 2.5em;
+        font-size: 35px;
         margin-bottom: 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -38,96 +38,127 @@
     </style>
 </head>
 <body>
-  <!--reminder popup-->
-<div class="w3-modal-content w3-display-bottommiddle" style="z-index: 9999;">
-  <header class="w3-container w3-white w3-padding-16"> 
-  <span onclick="this.parentElement.style.display='none'"
-  class="w3-button w3-large w3-display-topright">&times;</span>
-  <h2 style="color:#333; text-align: center;font-size: 30px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">REMINDER!</h2>
-  <p style="color:black; text-align:center;">If you have any used milk bags, bring them in to Student Services instead of throwing them out!</p>
-  </div>
-
+  
   <!--navigation bar-->
 <div class="w3-bar w3-card-4 w3-teal">
-    <a href="index.html" class="w3-bar-item w3-button w3-border-right" class=active>Home</a>
-    <a href="Projects.html" class="w3-bar-item w3-button w3-border-right">Our Projects</a>
-    <a href="News.html" class="w3-bar-item w3-button w3-border-right">Garden</a>
-    <a href="Suggestions.html" class="w3-bar-item w3-button w3-border-right">Suggestions</a>
-    <a href="Contact-page.html" class="w3-bar-item w3-button w3-border-right">Contact Us</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-border-right" class=active>Home</a>
+  <a href="Projects.html" class="w3-bar-item w3-button w3-border-right">Our Projects</a>
+  <a href="Garden.html" class="w3-bar-item w3-button w3-border-right">Gardening Projects</a>
+  <a href="Contact-page.html" class="w3-bar-item w3-button w3-border-right">Contact Us</a>
 </div>
-
-<!--slideshow-->
-<div class="w3-content w3-section">
-  <img class="mySlides" src="images/recycle (1).jpg" style="width:700px;height:285px; margin-left: 4%;">
-  <img class="mySlides" src="images/gardening (1).jpg" style="width:700px;height:285px; margin-left: 4%;">
-  <img class="mySlides" src="images/cookies (1).jpg" style="width:700px;height:285px; margin-left: 4%;">
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-var i;
-var x = document.getElementsByClassName("mySlides");
-for (i = 0; i < x.length; i++) {
-  x[i].style.display = "none";  
-}
-myIndex++;
-if (myIndex > x.length) {myIndex = 1}    
-x[myIndex-1].style.display = "block";  
-setTimeout(carousel, 3000); 
-}
-</script>
-
 
 <!--Tabs-->
 <div class="w3-bar w3-white">
-    <button class="w3-bar-item w3-button tablink w3-teal" onclick="openCity(event,'milk-bags')">Milk Bags</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'recycling-station')">Recycling Stations</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'eco-school')">Eco School Designation</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'garden')">Garden</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'bike-lane')">Goulbourn Bike Lane</button>
+    <button class="w3-bar-item w3-button tablink w3-teal" onclick="openProject(event,'milk-bags')">Milk Bags</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openProject(event,'recycling-station')">Recycling Stations</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openProject(event,'eco-school')">Eco School Designation</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openProject(event,'bike-lane')">Goulbourn Bike Lane</button>
   </div>
   
-  
-  <div id="milk-bags" class="w3-container city" style="max-width: 900px; margin-top: 50px; margin: auto;">
-    <h1>Milk Bags</h1>
-    <p>Milk bags are collected all year and sent to the Reuse and Recycle Program 
-      where they are weaved into mats and sent to developing countries and shelters. The Go Green members help fold the milk bags during lunch.</p> 
-</div> 
+  <!--MILK BAG PAGE-->
+  <div id="milk-bags" class="w3-container project" style="max-width: 900px; margin-top: 50px; margin: auto;">
+        <h1>✧･ﾟ: *✧･ﾟ:* Milk Bags ✧･ﾟ: *✧･ﾟ:*</h1>
+        <p>Milk bags are collected all year and sent to the Reuse and Recycle Program 
+          where they are weaved into mats and sent to developing countries and shelters. The Go Green members 
+          help fold the milk bags during lunch to send them to the program.</p> 
+
+          <!--reminder popup-->
+          <div class="w3-modal-content w3-display-middle" style="z-index: 9999; width: 25%;">
+              <header class="w3-container w3-white w3-padding-16" style="box-shadow: 0px 0px 0px 1000px #4444449e;"> 
+              <span onclick="this.parentElement.style.display='none'"
+              class="w3-button w3-large w3-display-topright">&times;</span>
+              <h2 style="color:#333; text-align: center;font-size: 30px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">HELP US OUT!</h2>
+              <p style="color:black; text-align:center;">If you have any used milk bags, bring them in to Student Services instead of throwing them out!</p>
+          </div>
+         
+    <div class="w3-card-4 w3-third">
+      <img src="images/Milk bag collection (5).JPG" alt="recycle station" style="width:300px; height:247px;">
+    </div>
+
+    <div class="w3-card-4 w3-third">
+      <img src="images/sew mats (3).jpg" alt="welding" style="width:300px; height:247px;">
+    </div>
+
+    <div class="w3-card-4 w3-third">
+      <img src="images/mats (1).png" alt="woodworking" style="width:300px; height:247px;">
+    </div>
+  </div> 
+
+
+  <!--RECYCLING STATION PAGE-->
+    <div id="recycling-station" class="w3-container project" style="display:none; max-width: 900px; margin-top: 50px; margin: auto;">
+      <h1>⋆*･ﾟ:⋆*･ﾟ Recycling Station Designs ⋆*･ﾟ:⋆*･ﾟ</h1>
+      <p>Although there are recycling bins in classrooms, the halls only have general garbage bins. This creates an issue, 
+          as people are forced to use the garbage bins during lunch and between periods. Specifically during lunch, lots of waste is 
+          produced. Inspired by the designs found in malls such as Bayshore, the woodworking and manufacturing classes have been 
+          working on building and designing a recycling station for the Atrium, which is a bin with three holes, for each type of waste. 
+          In the future, the Go Green will raise money to make similar stations on each floor.</p> 
+
+          <div class="w3-card-4 w3-third">
+            <img src="images/recycle station (1).jpg" alt="recycle station" style="width:300px; height:247px;">
+          </div>
+
+          <div class="w3-card-4 w3-third">
+            <img src="images/welding1 (3).jpg" alt="welding" style="width:300px; height:247px;">
+          </div>
+
+          <div class="w3-card-4 w3-third">
+            <img src="images/woodworking (1).jpg" alt="woodworking" style="width:300px; height:247px;">
+          </div>
+
+          </div>
+
+    </div>
+
+  <!--ECO SCHOOL PAGE-->
+  <div id="eco-school" class="w3-container project" style="display:none; max-width: 900px; margin-top: 50px; margin: auto;">
+    <h1>⋆⋅☆⋅⋆ Eco Schools Designation ⋆⋅☆⋅⋆</h1>
+    <p>EcoSchools Canada is a charity that offers a certification program for elementary through secondary schools. Each year, schools apply for 
+      certification by undertaking environmental actions, campaigns, and projects, and then recording them. At the end of the year, schools recieve a 
+      certification based on how eco-friendly they were. Last year we attained a Gold status. We're going for Platinum this year.</p>
+      <div class="w3-card-4 w3-third" style="margin-left: -5%;">
+        <img src="images/goldCert.png" alt="Person" style="height:247px; width:439px">
+      </div>
+      <div class="w3-card-4 w3-third" style="margin-left: 18%;">
+        <img src="images/batteryRecycling (1).JPG" alt="Person" style="height:247px; width:439px">
+      </div>
 
       </div>
   </div>
-
-  <div id="recycling-station" class="w3-container city" style="display:none; max-width: 900px; margin-top: 50px; margin: auto;">
-    <h1>Recycling Station Designs</h1>
-    <p>Although there are recycling bins in classrooms, the halls only have general garbage bins. This creates an issue, 
-        as people are forced to use the garbage bins during lunch and between periods. Specifically during lunch, lots of waste is 
-        produced. Inspired by the designs found in malls such as Bayshore, the woodworking and manufacturing classes have been 
-        working on building and designing a recycling station for the Atrium, which is a bin with three holes, for each type of waste. In the future, the Go Green will raise money to make similar stations on each floor.</p> 
-  </div>
-
-  <div id="eco-school" class="w3-container city" style="display:none; max-width: 900px; margin-top: 50px; margin: auto;">
-    <h1>Eco Schools Designation</h1>
-    <p>Last year we attained a Gold status. We're going for Platinum this year</p>
-  </div>
 </div>
 
-<div id="garden" class="w3-container city" style="display:none; max-width: 900px; margin-top: 50px; margin: auto;">
-    <h1>Gardening</h1>
-    <p>We are propagating house plants to run a plant sale with proceeds going to fund the vegetable garden, ASH Legacy Teaching Garden and front school gardens.</p>
-  </div>
+  <!--GOULBOURN BIKE LANE PAGE-->
+  <div id="bike-lane" class="w3-container project" style="display:none; max-width: 1000px; margin-top: 50px; margin: auto;">
+    <h1 style="max-width:1500px; width: 1500px; margin-left:-280px;">˗ˏˋ ♡ Goulbourn Forced Road - Bicycle lane initiative ♡ ˎˊ˗</h1>
+    <p>Last year, students created a 
+      petition to build a bike lane on Golbourn Forced Road which amassed 115 signatures. They presented this 
+      to councillor Cathy Curry who explained that a new road will be constructed with a bike lane once the 
+      drainage system is approved by the NCC. The proposal was sent out over 15 years ago, so instead of waiting 
+      for even longer, students have decided to express their interest in the approval of this drainage system 
+      so that they can get their bike lane as quickly as possible! Additionally, this drainage system being approved 
+      is very important to the preservation of Trillium Woods (where the Beaver Pond is and behind Richcraft), because without it they'll take down the forest and an artificial pond will be made.</p>
+      
+      <div style="max-width: 900px; margin-top: 50px; margin: auto;">
+        <div class="w3-card-4 w3-third">
+          <img src="images/trillium map (2).png" alt="recycle station" style="width:300px; height:247px;">
+        </div>
 
-  <div id="bike-lane" class="w3-container city" style="display:none;">
-    <h1>Goulbourn Forced Road - Bicycle lane initiative</h1>
-    <p style="max-width: 900px; margin-top: 50px; margin: auto;">description</p>
-  </div>
+        <div class="w3-card-4 w3-third">
+          <img src="images/trillium trees (1).jpg" alt="welding" style="width:300px; height:247px;">
+        </div>
 
+        <div class="w3-card-4 w3-third">
+          <img src="images/goulbourn 2 (1).png" alt="woodworking" style="width:300px; height:247px;">
+        </div>
+      </div>
+
+    </div>
+
+    <!--from w3 schools, opens the tab when you click the button-->
   <script>
-    function openCity(evt, cityName) {
+    function openProject(evt, projectName) {
       var i, x, tablinks;
-      x = document.getElementsByClassName("city");
+      x = document.getElementsByClassName("project");
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
@@ -135,22 +166,16 @@ setTimeout(carousel, 3000);
       for (i = 0; i < x.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
       }
-      document.getElementById(cityName).style.display = "block";
+      document.getElementById(projectName).style.display = "block";
       evt.currentTarget.className += " w3-teal";
     }
     </script>
 </div>
 
-<!-- <div class="w3-sidebar w3-padding-small w3-green" style="width: 20%; text-align: center; position: fixed; top: 0; right: 0; box-shadow: none; text-shadow:0px 0px 15px #444;">
-    <h3 class="w3-opacity" style="text-shadow:none"><b>Current Projects:</b></h3>
-    <div style="font-size: 24px;">
-    <button class="w3-bar-item w3-button tablink" onclick="openProject(event, 'Milk Bags')">Milk Bags</button>
-    <br>
-    <button class="w3-bar-item w3-button tablink" onclick="openProject(event, 'Paris')">Paris</button>
-    <br>
-    <button class="w3-bar-item w3-button tablink" onclick="openProject(event, 'Tokyo')">Tokyo</button>
+
   </div>
-  </div>-->
+  </div>
 
 </body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </html>
